@@ -1,0 +1,17 @@
+{
+  "name": "chapter03",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node index.js --seneca.log.all |grep ready",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eduard Luhtonen <luhtonen@gmail.com> (http://luhtonen.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "seneca": "^2.1.0"
+  }
+}
