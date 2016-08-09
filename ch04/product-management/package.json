@@ -1,0 +1,23 @@
+{
+  "name": "product-management",
+  "version": "1.0.0",
+  "description": "Product management microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "microservices",
+    "products"
+  ],
+  "author": "Eduard Luhtonen <luhtonen@gmail.com> (http://luhtonen.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "seneca": "^2.1.0",
+    "seneca-entity": "^1.2.0",
+    "seneca-mongo-store": "^1.0.0"
+  }
+}
