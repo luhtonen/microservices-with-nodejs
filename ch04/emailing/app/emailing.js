@@ -16,12 +16,20 @@ module.exports = function (options) {
   const seneca = this;
 
   seneca.add({area: 'email', action: 'send'}, send_email);
+  seneca.add({area: 'email', action: 'send', nodemailer: true}, send_email_with_nodemailer);
 
   /**
-   * Sends an email including the content.
+   * Dry run email sending
    */
-  function send_email(err, done) {
+  function send_email(args, done) {
     console.log(args);
+    done(null, {status: "sent"});
+  }
+
+  /**
+   * Sends an email including the content with nodemailer module.
+   */
+  function send_email_with_nodemailer(args, done) {
     const mailOptions = {
       from: 'Micromerce Info <info@micromerce.com>',
       to: args.to,
